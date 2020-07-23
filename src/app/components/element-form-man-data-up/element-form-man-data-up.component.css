@@ -1,0 +1,33 @@
+form.normal-form{
+    margin: 10px;
+}
+
+.controles-container{
+    width: 100%;
+    padding: 5%;
+}
+
+.controles-container > * {
+    width: 100%;
+}
+
+/* .button-row button{ separacion entre los botones de haber varios
+    margin: 5px;
+} */
+
+label{
+    font-weight: bold;
+}
+
+.controles-container {
+    padding: 0%;
+}
+
+.mat-form-field {
+    line-height: 1.250;
+    width: 300px;
+}
+
+/* .mat-input-element {
+    background:border-box;
+} */

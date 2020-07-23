@@ -1,0 +1,221 @@
+<br />
+
+<nav>
+  <label>
+    <img src="../assets/images/backArrow.png" width="30" height="30">
+  </label>
+  <label>
+    <img src="../assets/images/manualDataUploadTitle.png" width="210" height="31">
+  </label>
+</nav>
+
+<br />
+<div class="container">
+  <mat-card>
+  <form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
+
+    <div class="controles-container">
+
+      <input type="hidden" formControlName="$key">
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12"><label>Underwriting SCIB - NEW production</label></div>
+          <br/>
+          <br/>
+          <div  class="col-lg-4">
+            <mat-form-field>
+              <input formControlName="underWrScibNewProEurMM" matInput placeholder="Eur MM">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-lg">
+            <mat-form-field>
+              <input formControlName="underWrScibNewProOpera" matInput placeholder="Operacs">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <br/>
+        <div class="row">
+          <div class="col-lg-12"><label>Underwriting SCIB - Exposure</label></div>
+          <div class="col-lg-4">
+            <mat-form-field>
+              <input formControlName="underWrScibExposuEurMM" matInput placeholder="Eur MM">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-lg">
+            <mat-form-field>
+              <input formControlName="underWrScibExposuOpera" matInput placeholder="Operacs">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <br/>
+        <div class="row">
+          <div class="col-lg-12"><label>Underwriting Corporate - New production</label></div>
+          <div class="col-lg-4">
+            <mat-form-field>
+              <input formControlName="underWrCorpNewProEurMM" matInput placeholder="Eur MM">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-lg">
+            <mat-form-field>
+              <input formControlName="underWrCorpNewProOpera" matInput placeholder="Operacs">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <br/>
+        <div class="row">
+          <div class="col-lg-12"><label>Underwriting Corporate - Exposure</label></div>
+          <div class="col-lg-4">
+            <mat-form-field>
+              <input formControlName="underWrCorpExposuEurMM" matInput placeholder="Eur MM">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-lg">
+            <mat-form-field>
+              <input formControlName="underWrCorpExposuOpera" matInput placeholder="Operacs">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <br/>
+        <div class="row">
+          <div class="col-lg-12"><label>Total Draw exposure - Non performing</label></div>
+          <div class="col-lg-4">
+            <mat-form-field>
+              <input formControlName="TotDrawExpoNonPerfEurMM" matInput placeholder="Eur MM">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-lg">
+            <mat-form-field>
+              <input formControlName="TotDrawExpoNonPerfOpera" matInput placeholder="Operacs">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <br/>
+        <div class="row">
+          <div class="col-lg-12"><label>Total stock of hung deals</label></div>
+          <div class="col-lg-4">
+            <mat-form-field>
+              <input formControlName="TotStockOfHungDealEurMM" matInput placeholder="Eur MM">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-lg">
+            <mat-form-field>
+              <input formControlName="TotStockOfHungDealOpera" matInput placeholder="Operacs">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <br/>
+        <div class="row">
+          <div class="col-lg-12"><label>Obligor/Borrower Names - Nung Deals</label></div>
+          <div class="col-lg-4">
+            <mat-form-field>
+              <input formControlName="ObligBorNamNunDealEurMM" matInput placeholder="Eur MM">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-lg">
+            <mat-form-field>
+              <input formControlName="ObligBorNamNunDealOpera" matInput placeholder="Operacs">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <br/>
+        <div class="row">
+          <div class="col-lg-12"><label>Hield Yield Trading arranged by the bank</label></div>
+          <div class="col-lg-4">
+            <mat-form-field>
+              <input formControlName="HielYielTrArByBankEurMM" matInput placeholder="Eur MM">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-lg">
+            <mat-form-field>
+              <input formControlName="HielYielTrArByBankOpera" matInput placeholder="Operacs">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <br/>
+        <div class="row">
+          <div class="col-lg-12"><label>High Yield Trading</label></div>
+          <div class="col-lg-4">
+            <mat-form-field>
+              <input formControlName="HighYieldTradingEurMM" matInput placeholder="Eur MM">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-lg">
+            <mat-form-field>
+              <input formControlName="HighYieldTradingOpera" matInput placeholder="Operacs">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <br/>
+        <div class="row">
+          <div class="col-lg-12"><label>Loan trading</label></div>
+          <div class="col-lg-4">
+            <mat-form-field>
+              <input formControlName="LoanTradingEurMM" matInput placeholder="Eur MM">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-lg">
+            <mat-form-field>
+              <input formControlName="LoanTradingOpera" matInput placeholder="Operacs">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <br/>
+        <div class="row">
+          <div class="col-lg-12"><label>CLO</label></div>
+          <div class="col-lg-4">
+            <mat-form-field>
+              <input formControlName="CLOEurMM" matInput placeholder="Eur MM">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-lg">
+            <mat-form-field>
+              <input formControlName="CLOOpera" matInput placeholder="Operacs">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="button-row">
+      <button mat-raised-button color="warn" type="submit" [disabled]="service.form.invalid">Submit</button>
+    </div>
+  </form>
+  </mat-card>
+</div>

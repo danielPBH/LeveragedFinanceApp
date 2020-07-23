@@ -1,0 +1,35 @@
+* {
+    margin: 0px;
+    padding: 0px;
+
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+  nav{
+    background: #F3F7F9;
+    /* height: 80px; */
+    width: 100%;
+    /* box-shadow: 2px 2px 5px #b1b0b0; */
+  }
+
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+
+  nav ul li {
+    display:inline-block;
+    /* line-height: 80px; */
+    margin: 0 5px;
+}
+
+/* ////////Drop component/////////// */
+
+/* .ngx-file-drop__drop-zone[_ngcontent-xmx-c173] {
+    height: 100px;
+    margin: auto;
+    border: 2px dotted #0782d0;
+    border-radius: 30px;
+} */

@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    padding: 0px;
+
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  
+  mat-grid-tile .posRight {
+    position: relative;
+    left: 23px;
+}
+
+.principalElements{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.secundaryElements{
+    font-size: 15px;
+    text-align: center;
+}
+
+nav{
+    /* background: #F3F7F9; */
+    width: 100%;
+  }
+
+  nav ul{
+    float: left;
+    margin-right: 20px;
+  }
+
+  nav ul li {
+    display:inline-block;
+    margin: 0 5px;
+}

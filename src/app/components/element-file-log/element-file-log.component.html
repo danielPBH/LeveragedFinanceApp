@@ -1,0 +1,125 @@
+<br />
+
+<nav>
+    <label>
+        <img src="../assets/images/backArrow.png" width="30" height="30">
+    </label>
+
+    <label class="titleText">File Log</label>
+</nav>
+<br />
+<mat-card>
+    <form [formGroup]="form" class="form">
+        <br />
+        <div class="controles-container">
+            <div class="row">
+                <input type="hidden" formControlName="$key">
+                <div class="col-lg-1">
+                    <img src="../assets/images/chan-097-user-story@2x.png" width="48" height="45">
+                </div>
+                <div class="col-lg-2">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Name</mat-label>
+                        <input formControlName="name" matInput>
+                    </mat-form-field>
+                </div>
+                <div class="col-lg-2">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Last Modified</mat-label>
+                        <input formControlName="lastModified" matInput>
+                    </mat-form-field>
+                </div>
+                <div class="col-lg-2">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Last Modified User</mat-label>
+                        <input formControlName="lastModifiedUser" matInput>
+                    </mat-form-field>
+                </div>
+                <div class="col-lg-2">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Business Unit</mat-label>
+                        <input formControlName="businessUnit" matInput>
+                    </mat-form-field>
+                </div>
+                <div class="col-lg-3">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Status</mat-label>
+                        <input formControlName="status" matInput>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</mat-card>
+<br />
+<div class="mat-elevation-z8">
+    <mat-table [dataSource]="listData" matSort>
+
+        <ng-container matColumnDef="sku">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Sku</mat-header-cell>
+            <mat-cell *matCellDef="let element">
+                <p class="card-text text-truncate">{{element.sku}}</p>
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+            <mat-cell *matCellDef="let element">
+                <!-- {{element.name}} -->
+                <p class="card-text text-truncate">{{element.name}}</p>
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="description">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Description</mat-header-cell>
+            <mat-cell *matCellDef="let element">
+                <!-- {{element.description}} -->
+                <p class="card-text text-truncate">{{element.description}}</p>
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="unit_price">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Unit_price</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.unitPrice | currency: 'INR'}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="image_url">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Image_url</mat-header-cell>
+            <mat-cell *matCellDef="let element">
+                <!-- {{element.imageUrl}} -->
+                <p class="card-text text-truncate">{{element.imageUrl}}</p>
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                <!-- <div (click)="openDialog()"> -->
+                <div>
+                    <img src="../assets/images/burguerPoints.png" width="26" height="34">
+                </div>
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="loading">
+            <mat-footer-cell *matFooterCellDef colspan="6">
+                Loading data...
+            </mat-footer-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="noData">
+            <mat-footer-cell *matFooterCellDef colspan="6">
+                No data.
+            </mat-footer-cell>
+        </ng-container>
+
+        <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':listData!=null}"></mat-footer-row>
+        <mat-footer-row *matFooterRowDef="['noData']" [ngClass]="{'hide':!(listData!=null && listData.data.length==0)}">
+        </mat-footer-row>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+</div>

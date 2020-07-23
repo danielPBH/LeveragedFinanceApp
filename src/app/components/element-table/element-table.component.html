@@ -1,0 +1,88 @@
+<br />
+
+<nav>
+  <label>
+    <img src="../assets/images/UploadFiles.png" width="155" height="40">
+  </label>
+
+  <ul style="list-style-type:none;">
+    <li routerLink="/form-man-data-up">
+      <img src="../assets/images/ManualDataUpload.png" width="230" height="40">
+    </li>
+    <li routerLink="/file-upload">
+      <img src="../assets/images/newFile.png" width="135" height="42">
+    </li>
+  </ul>
+</nav>
+
+<br />
+
+  <div class="mat-elevation-z8">
+    <mat-table [dataSource]="listData" matSort>
+
+      <ng-container matColumnDef="sku">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Sku</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <p class="card-text text-truncate">{{element.sku}}</p>
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <!-- {{element.name}} -->
+          <p class="card-text text-truncate">{{element.name}}</p>
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Description</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <!-- {{element.description}} -->
+          <p class="card-text text-truncate">{{element.description}}</p>
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="unit_price">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Unit_price</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.unitPrice | currency: 'INR'}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="image_url">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Image_url</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <!-- {{element.imageUrl}} -->
+          <p class="card-text text-truncate">{{element.imageUrl}}</p>
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let row">
+            <div (click)="openDialog(row)">
+              <img  src="../assets/images/burguerPoints.png" width="26" height="34">
+            </div>
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="loading">
+        <mat-footer-cell *matFooterCellDef colspan="6">
+          Loading data...
+        </mat-footer-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="noData">
+        <mat-footer-cell *matFooterCellDef colspan="6">
+          No data.
+        </mat-footer-cell>
+      </ng-container>
+
+      <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':listData!=null}"></mat-footer-row>
+      <mat-footer-row *matFooterRowDef="['noData']" [ngClass]="{'hide':!(listData!=null && listData.data.length==0)}">
+      </mat-footer-row>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+  </div>
