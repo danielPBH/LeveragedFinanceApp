@@ -26,6 +26,7 @@ import { ElementFormManDataUpComponent } from './components/element-form-man-dat
 import { ElementFileUploadInformationComponent } from './components/element-file-upload-information/element-file-upload-information.component';
 import { ElementDialogTableComponent } from './components/element-dialog-table/element-dialog-table.component';
 import { ElementFileLogComponent } from './components/element-file-log/element-file-log.component';
+import { ElementFileLogErrorDescriptionComponent } from './components/element-file-log-error-description/element-file-log-error-description.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ElementFileLogComponent } from './components/element-file-log/element-f
     ElementFormManDataUpComponent,
     ElementFileUploadInformationComponent,
     ElementDialogTableComponent,
-    ElementFileLogComponent
+    ElementFileLogComponent,
+    ElementFileLogErrorDescriptionComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +57,9 @@ import { ElementFileLogComponent } from './components/element-file-log/element-f
   ],
   providers: [ElementService, ManualdatauploadService],
   bootstrap: [AppComponent],
-  entryComponents:[ElementFileUploadInformationComponent,ElementDialogTableComponent]
+  entryComponents:[
+    ElementFileUploadInformationComponent,
+    ElementDialogTableComponent,
+    ElementFileLogErrorDescriptionComponent]
 })
 export class AppModule { }

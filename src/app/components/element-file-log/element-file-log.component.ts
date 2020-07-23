@@ -3,10 +3,11 @@ import { ElementService } from 'src/app/services/element.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 //import { ElementDialogTableComponent } from '../element-dialog-table/element-dialog-table.component';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
+import { ElementFileLogErrorDescriptionComponent } from '../element-file-log-error-description/element-file-log-error-description.component';
 
 
 @Component({
@@ -54,6 +55,7 @@ export class ElementFileLogComponent implements OnInit {
             ...item
           };
         });
+        console.log("array: ",array)
         this.listData = new MatTableDataSource(array);
         this.listData.sort = this.sort;
         this.listData.paginator = this.paginator;
@@ -75,19 +77,39 @@ export class ElementFileLogComponent implements OnInit {
           businessUnit:this.jsonParseObject.id,
           status:this.jsonParseObject.imageUrl
         })
-        //console.log("JSON.parse(): ", JSON.parse(this.page));
       });
 
       
   }
 
-  // openDialog(): void {
-  //   const dialogRef = this.dialog.open(ElementDialogTableComponent, {
-  //   });
+  openDialog(row): void {
 
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     console.log('The dialog was closed')
-  //   });
-  // }
+    const data:any[] = [
+      {
+        date: "18/06/2020 - 15:00h",
+        errorDescription: "Error description 1"
+      },
+      {
+        date: "18/06/2020 - 15:00h",
+        errorDescription: "Error description 2"
+      },
+      {
+        date: "18/06/2020 - 15:00h",
+        errorDescription: "Error description 3"
+      },
+      {
+        date: "18/06/2020 - 15:00h",
+        errorDescription: "Error description 4"
+      }
+    ]
+
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = "75%";
+    dialogConfig.data = data;
+
+    const dialogRef = this.dialog.open(ElementFileLogErrorDescriptionComponent, dialogConfig);
+  }
 
 }
