@@ -12,7 +12,8 @@ export class ElementFileLogErrorDescriptionComponent implements OnInit {
     public dialogRef: MatDialogRef<ElementFileLogErrorDescriptionComponent>,
     @Inject(MAT_DIALOG_DATA) data
   ) {
-    console.log("data: ", data)
+    console.log("data: ",data)
+    console.log("JSON: ", JSON.stringify(data))
    }
 
   ngOnInit(): void {

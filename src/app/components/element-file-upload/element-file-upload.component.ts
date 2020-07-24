@@ -25,6 +25,7 @@ export class ElementFileUploadComponent implements OnInit {
   wereValidAndReadyToBeSaved: number = 0;
   recordsPresentedError: number = 0;
   isShown: boolean = false; // hidden by default
+  public jsonString:any;
 
   constructor(
     private dialog: MatDialog
@@ -35,12 +36,18 @@ export class ElementFileUploadComponent implements OnInit {
 
   public dropped(files: NgxFileDropEntry[]) {
     this.files = files;
+    var arrayXlsx = [];
+    var arrayXlsx2 = [];
+    //var arrayXlsxList = [];
     for (const droppedFile of files) {
       //console.log("droppedFile: ", droppedFile)
 
       // Is it a file?
       if (droppedFile.fileEntry.isFile) {
         const fileEntry = droppedFile.fileEntry as FileSystemFileEntry;
+
+        const test: any = {}; // Object
+
         fileEntry.file((file: File) => {
 
           const reader: FileReader = new FileReader();
@@ -58,13 +65,15 @@ export class ElementFileUploadComponent implements OnInit {
 
             //console.log("this.data: ",this.data);
             var i;
-            var arrayXlsx = [];
-            
+
+            var strFirs = '{"content":';
+            var strLast = '}';
+
             this.toggleShow();
             this.recordsWereLoaded = this.data.length - 4;
             this.wereValidAndReadyToBeSaved = this.data.length - 4;
             for (i = 0; i <= this.data.length - 1; ++i) {
-              var InterfaceXlsx: InterfaceXlsxWorkSheet;
+              //var InterfaceXlsx: InterfaceXlsxWorkSheet;
               if (i > 4) {
                 var j;
                 //console.log("this.data[i].length: ",this.data[i].length)
@@ -312,6 +321,8 @@ export class ElementFileUploadComponent implements OnInit {
 
                 }
 
+
+
                 var IXslsWS: InterfaceXlsxWorkSheet = <InterfaceXlsxWorkSheet>{
                   country: arrayXlsx[1],
                   segment: arrayXlsx[2],
@@ -352,21 +363,30 @@ export class ElementFileUploadComponent implements OnInit {
                   currencyBalanceInformation: arrayXlsx[37],
                 }
 
+                //console.log("IXslsWS: ",IXslsWS)
+                arrayXlsx2.push(arrayXlsx)
+                //console.log("JSON: ",JSON.stringify(arrayXlsx))
+                //console.log("arrayXlsx2: ", JSON.stringify(arrayXlsx2))
+
                 this.InterfaceArrayXlsxWorkSheet.push(IXslsWS);
 
               }
             }
+            //console.log("arrayXlsx2: ",JSON.stringify(arrayXlsx2))
+            this.jsonString = JSON.stringify(arrayXlsx2);
           };
 
           reader.readAsBinaryString(file)
         });
 
-        console.log("InterfaceArrayXlsxWorkSheet: ", this.InterfaceArrayXlsxWorkSheet)
+        //console.log("this.InterfaceArrayXlsxWorkSheet: ", this.InterfaceArrayXlsxWorkSheet)
+        //console.log("arrayXlsx2: ", JSON.stringify(arrayXlsx2))
+        console.log("this.jsonString: ", this.jsonString)
 
       } else {
         // It was a directory (empty directories are added, otherwise only files)
         const fileEntry = droppedFile.fileEntry as FileSystemDirectoryEntry;
-        console.log("2: ", droppedFile.relativePath, fileEntry);
+        //console.log("2: ", droppedFile.relativePath, fileEntry);
       }
     }
   }

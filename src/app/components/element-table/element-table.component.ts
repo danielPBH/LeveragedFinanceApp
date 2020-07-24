@@ -62,9 +62,10 @@ export class ElementTableComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       //this.route.navigate([result]);
       
+      console.log("row type: ", row)
       const prueba = JSON.stringify(row);
       //console.log("row: ", row);
-      console.log("JSON.stringify(): ", prueba);
+      console.log("JSON.stringify() 1: ", prueba);
       //console.log("JSON.parse(): ", JSON.parse(prueba));
 
       this.route.navigate([result], { queryParams: { page: prueba} })

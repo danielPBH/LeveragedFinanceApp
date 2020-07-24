@@ -55,7 +55,7 @@ export class ElementFileLogComponent implements OnInit {
             ...item
           };
         });
-        console.log("array: ",array)
+        console.log("array: ",typeof(array))
         this.listData = new MatTableDataSource(array);
         this.listData.sort = this.sort;
         this.listData.paginator = this.paginator;
@@ -84,24 +84,32 @@ export class ElementFileLogComponent implements OnInit {
 
   openDialog(row): void {
 
-    const data:any[] = [
-      {
-        date: "18/06/2020 - 15:00h",
-        errorDescription: "Error description 1"
-      },
-      {
-        date: "18/06/2020 - 15:00h",
-        errorDescription: "Error description 2"
-      },
-      {
-        date: "18/06/2020 - 15:00h",
-        errorDescription: "Error description 3"
-      },
-      {
-        date: "18/06/2020 - 15:00h",
-        errorDescription: "Error description 4"
-      }
-    ]
+    // let data:any[] = [
+    //   {
+    //     date: "18/06/2020 - 15:00h",
+    //     errorDescription: "Error description 1"
+    //   },
+    //   {
+    //     date: "18/06/2020 - 15:00h",
+    //     errorDescription: "Error description 2"
+    //   },
+    //   {
+    //     date: "18/06/2020 - 15:00h",
+    //     errorDescription: "Error description 3"
+    //   },
+    //   {
+    //     date: "18/06/2020 - 15:00h",
+    //     errorDescription: "Error description 4"
+    //   }
+    // ]
+    
+    var data = [];
+    var data2 = {
+      date: "18/06/2020 - 15:00h",
+      errorDescription: "Error description 1"
+    };
+
+    data.push(data2);
 
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
