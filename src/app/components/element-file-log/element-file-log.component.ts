@@ -29,6 +29,7 @@ export class ElementFileLogComponent implements OnInit {
   displayedColumns: string[] = ['sku', 'name', 'description', 'unit_price', 'image_url', 'actions'];
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  //
 
   // Formulario
   public sub: any;
@@ -43,9 +44,11 @@ export class ElementFileLogComponent implements OnInit {
     businessUnit: new FormControl(''),
     status: new FormControl('')
   });
+  //
 
   ngOnInit(): void {
-
+    
+    //Populate table
     this.service.getBooks().subscribe(
       //data => this.books = data
       list => {
@@ -55,12 +58,17 @@ export class ElementFileLogComponent implements OnInit {
             ...item
           };
         });
-        console.log("array: ",typeof(array))
+      
+        console.log("array Type: ",typeof(array))
+        console.log("array: ",array)
         this.listData = new MatTableDataSource(array);
         this.listData.sort = this.sort;
         this.listData.paginator = this.paginator;
       });
+      //
+      
 
+      //Populate form
       this.sub = this.route
       .queryParams
       .subscribe(params => {
@@ -78,38 +86,37 @@ export class ElementFileLogComponent implements OnInit {
           status:this.jsonParseObject.imageUrl
         })
       });
-
+      //
       
   }
 
   openDialog(row): void {
 
-    // let data:any[] = [
-    //   {
-    //     date: "18/06/2020 - 15:00h",
-    //     errorDescription: "Error description 1"
-    //   },
-    //   {
-    //     date: "18/06/2020 - 15:00h",
-    //     errorDescription: "Error description 2"
-    //   },
-    //   {
-    //     date: "18/06/2020 - 15:00h",
-    //     errorDescription: "Error description 3"
-    //   },
-    //   {
-    //     date: "18/06/2020 - 15:00h",
-    //     errorDescription: "Error description 4"
-    //   }
-    // ]
+    let data:any[] = [
+      {
+        date: "18/06/2020 - 15:00h",
+        errorDescription: "Error description 1"
+      },
+      {
+        date: "18/06/2020 - 15:00h",
+        errorDescription: "Error description 2"
+      },
+      {
+        date: "18/06/2020 - 15:00h",
+        errorDescription: "Error description 3"
+      },
+      {
+        date: "18/06/2020 - 15:00h",
+        errorDescription: "Error description 4"
+      }
+    ]
     
-    var data = [];
-    var data2 = {
-      date: "18/06/2020 - 15:00h",
-      errorDescription: "Error description 1"
-    };
-
-    data.push(data2);
+    // var data = [];
+    // var data2 = {
+    //   date: "18/06/2020 - 15:00h",
+    //   errorDescription: "Error description 1"
+    // };
+    //data.push(data2);
 
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
