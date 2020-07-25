@@ -13,3 +13,9 @@
     position: absolute;
     top: 0px;
   }
+
+  .mat-elevation-z0{
+    box-shadow: 0px;
+  }
+
+  
