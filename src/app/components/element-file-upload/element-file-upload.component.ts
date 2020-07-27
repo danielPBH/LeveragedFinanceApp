@@ -372,7 +372,7 @@ export class ElementFileUploadComponent implements OnInit {
 
               }
             }
-            //console.log("arrayXlsx2: ",JSON.stringify(arrayXlsx2))
+            console.log("arrayXlsx2: ",JSON.stringify(arrayXlsx2))
             this.jsonString = JSON.stringify(arrayXlsx2);
           };
 
