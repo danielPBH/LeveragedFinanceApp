@@ -1,19 +1,8 @@
-<br />
-
-<nav>
-  <label>
-    <img src="../assets/images/backArrow.png" width="30" height="30">
-  </label>
-  <label>
-    <img src="../assets/images/manualDataUploadTitle.png" width="210" height="31">
-  </label>
-</nav>
-
-<br />
 <div class="container">
-  <mat-card>
-  <form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
+  <form [formGroup]="service.formManualDataUpload" class="normal-form" (submit)="onSubmit()">
 
+  
+    <br />
     <div class="controles-container">
 
       <input type="hidden" formControlName="$key">
@@ -21,6 +10,13 @@
       <div class="container">
 
         <div class="row">
+          <div class="col-lg-12">
+            <label class="secondTitle">
+              Manual data upload 
+            </label>
+          </div>
+          <br />
+          <br />
           <div class="col-lg-12"><label>Underwriting SCIB - NEW production</label></div>
           <br/>
           <br/>
@@ -212,10 +208,13 @@
 
     </div>
 
+    <section>
+      <!-- <div class="example-label">Raised</div> -->
+      <div class="example-button-row">
+        <!-- <button mat-raised-button color="warn">Warn</button> -->
+        <img src="../assets/images/saveButton.png" width="91" height="40">
+      </div>
+    </section>
 
-    <div class="button-row">
-      <button mat-raised-button color="warn" type="submit" [disabled]="service.form.invalid">Submit</button>
-    </div>
   </form>
-  </mat-card>
 </div>

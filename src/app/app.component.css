@@ -54,3 +54,13 @@
     background:#EC0000; /* Color de la barra*/
   }
 
+
+  /* Ini Angular material personalization Tabs */
+  ::ng-deep .mat-ink-bar {
+    background-color: #ec0000 !important
+    }
+
+    ::ng-deep .mat-tab-label-active {
+        font-weight: bold;
+        }
+/* Fin Angular material personalization Tabs */

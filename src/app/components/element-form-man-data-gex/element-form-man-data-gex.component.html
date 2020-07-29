@@ -1,0 +1,124 @@
+<div class="container">
+    <form [formGroup]="service.formGlobalVsExposure" class="normal-form" (submit)="onSubmit()">
+  
+    
+      <br />
+      <div class="controles-container">
+  
+        <input type="hidden" formControlName="$key">
+  
+        <div class="container">
+  
+          <div class="row">
+            <div class="col-lg-12">
+              <label class="secondTitle">
+                Global vs Exposure 
+              </label>
+            </div>
+            <br />
+            <div  class="col-lg-4">
+              <mat-form-field>
+                <input formControlName="asia" matInput placeholder="Asia">
+                <mat-error>This field is mandatory.</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-lg">
+              <mat-form-field>
+                <input formControlName="continentalEurope" matInput placeholder="Continental Europe">
+                <mat-error>This field is mandatory.</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+  
+          <br/>
+          <div class="row">
+            <div class="col-lg-4">
+              <mat-form-field>
+                <input formControlName="brasil" matInput placeholder="Brasil">
+                <mat-error>This field is mandatory.</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-lg">
+              <mat-form-field>
+                <input formControlName="chile" matInput placeholder="Chile">
+                <mat-error>This field is mandatory.</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+  
+          <br/>
+
+          <div class="row">
+            <div class="col-lg-4">
+              <mat-form-field>
+                <input formControlName="espana" matInput placeholder="España">
+                <mat-error>This field is mandatory.</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-lg">
+              <mat-form-field>
+                <input formControlName="mexico" matInput placeholder="Mexico">
+                <mat-error>This field is mandatory.</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <br/>
+
+          <div class="row">
+            <div class="col-lg-4">
+              <mat-form-field>
+                <input formControlName="polonia" matInput placeholder="Polonia">
+                <mat-error>This field is mandatory.</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-lg">
+              <mat-form-field>
+                <input formControlName="portugal" matInput placeholder="Portugal">
+                <mat-error>This field is mandatory.</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <br/>
+
+          <div class="row">
+            <div class="col-lg-4">
+              <mat-form-field>
+                <input formControlName="uk" matInput placeholder="UK">
+                <mat-error>This field is mandatory.</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-lg">
+              <mat-form-field>
+                <input formControlName="eeuu" matInput placeholder="EE.UU">
+                <mat-error>This field is mandatory.</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <br/>
+
+          <div class="row">
+            <div class="col-lg-4">
+              <mat-form-field>
+                <input formControlName="totalGrupo" matInput placeholder="Total Grupo">
+                <mat-error>This field is mandatory.</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          
+          </div>
+  
+      </div>
+  
+      <section>
+        <!-- <div class="example-label">Raised</div> -->
+        <div class="example-button-row">
+          <!-- <button mat-raised-button color="warn">Warn</button> -->
+          <img src="../assets/images/saveButton.png" width="91" height="40">
+        </div>
+      </section>
+  
+    </form>
+  </div>

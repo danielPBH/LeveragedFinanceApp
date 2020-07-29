@@ -11,6 +11,8 @@ import { ElementFormManDataUpComponent } from './components/element-form-man-dat
 import { ElementFileUploadInformationComponent } from './components/element-file-upload-information/element-file-upload-information.component';
 import { ElementDialogTableComponent } from './components/element-dialog-table/element-dialog-table.component';
 import { ElementFileLogComponent } from './components/element-file-log/element-file-log.component';
+import { ElementFormManDataGexComponent } from './components/element-form-man-data-gex/element-form-man-data-gex.component';
+import { ElementManDataComponent } from './components/element-man-data/element-man-data.component';
 
 
 const routes: Routes = [
@@ -24,6 +26,8 @@ const routes: Routes = [
   {path: 'form-man-data-up', component: ElementFormManDataUpComponent},
   {path: 'file-upload-information', component: ElementFileUploadInformationComponent},
   {path: 'file-log', component: ElementFileLogComponent},
+  {path: 'form-man-data-gex', component: ElementFormManDataGexComponent},
+  {path: 'man-data', component: ElementManDataComponent},
   {path: '**', component: ElementListComponent}
 ];
 

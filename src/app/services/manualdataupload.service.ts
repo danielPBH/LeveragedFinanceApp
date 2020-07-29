@@ -9,8 +9,9 @@ export class ManualdatauploadService {
   constructor() { }
 
   public manualDataUpload = <any>[];
+  public GlobalVsExposure = <any>[];
 
-  form: FormGroup = new FormGroup({
+  formManualDataUpload: FormGroup = new FormGroup({
     $key: new FormControl(null),
 
     // Underwriting SCIB - NEW production
@@ -50,6 +51,34 @@ export class ManualdatauploadService {
 
   });
 
+
+  formGlobalVsExposure: FormGroup = new FormGroup({
+    $key: new FormControl(null),
+
+    // Asia
+    asia: new FormControl('',[Validators.required,Validators.pattern("^[0-9]*$")]),
+    // Continental Europe
+    continentalEurope: new FormControl('',Validators.required),
+    // Brasil
+    brasil: new FormControl('',Validators.required),
+    // Chile
+    chile: new FormControl('',Validators.required),
+    // España
+    espana: new FormControl('',Validators.required),
+    // Mexico
+    mexico: new FormControl('',Validators.required),
+    // Polonia
+    polonia: new FormControl('',Validators.required),
+    // Portugal
+    portugal: new FormControl('',Validators.required),
+    // Uk
+    uk: new FormControl('',Validators.required),
+    // EEUU
+    eeuu: new FormControl('',Validators.required),
+    // Total Grupo
+    totalGrupo: new FormControl('',Validators.required),
+  });
+
   // getManualDataUpload(){
   //   this.manualDataUpload = 
   // }
@@ -83,6 +112,27 @@ export class ManualdatauploadService {
     );
 
     console.log("this.manualDataUpload: ", this.manualDataUpload)
+  }
+
+
+  insertGlobalVsExposure(dataUpload){
+    this.GlobalVsExposure.push(
+      {
+        asia:dataUpload.asia,
+        continentalEurope:dataUpload.continentalEurope,
+        brasil:dataUpload.brasil,
+        chile:dataUpload.chile,
+        espana:dataUpload.espana,
+        mexico:dataUpload.mexico,
+        polonia:dataUpload.polonia,
+        portugal:dataUpload.portugal,
+        uk:dataUpload.uk,
+        eeuu:dataUpload.eeuu,
+        totalGrupo:dataUpload.totalGrupo
+      }
+    );
+
+    console.log("this.GlobalVsExposure: ", this.GlobalVsExposure)
   }
 
 }

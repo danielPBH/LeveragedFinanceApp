@@ -14,8 +14,8 @@ export class ElementFormManDataUpComponent implements OnInit {
   }
 
   onSubmit(){
-    if(this.service.form.valid){
-      this.service.insertManualDataUpload(this.service.form.value);
+    if(this.service.formManualDataUpload.valid){
+      this.service.insertManualDataUpload(this.service.formManualDataUpload.value);
       //this.service.form.reset();
       //this.service.initializeFormGroup();
     }
