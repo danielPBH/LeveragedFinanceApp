@@ -19,13 +19,16 @@
             <div  class="col-lg-4">
               <mat-form-field>
                 <input formControlName="asia" matInput placeholder="Asia">
-                <mat-error>This field is mandatory.</mat-error>
+                <!-- <mat-error>This field is mandatory.</mat-error> -->
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['asia'].errors?.required">This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['asia'].errors?.pattern">Values shoul be numeric.</mat-error>
               </mat-form-field>
             </div>
             <div class="col-lg">
               <mat-form-field>
                 <input formControlName="continentalEurope" matInput placeholder="Continental Europe">
-                <mat-error>This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['continentalEurope'].errors?.required">This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['continentalEurope'].errors?.pattern">Values shoul be numeric.</mat-error>
               </mat-form-field>
             </div>
           </div>
@@ -35,13 +38,15 @@
             <div class="col-lg-4">
               <mat-form-field>
                 <input formControlName="brasil" matInput placeholder="Brasil">
-                <mat-error>This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['brasil'].errors?.required">This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['brasil'].errors?.pattern">Values shoul be numeric.</mat-error>
               </mat-form-field>
             </div>
             <div class="col-lg">
               <mat-form-field>
                 <input formControlName="chile" matInput placeholder="Chile">
-                <mat-error>This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['chile'].errors?.required">This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['chile'].errors?.pattern">Values shoul be numeric.</mat-error>
               </mat-form-field>
             </div>
           </div>
@@ -52,13 +57,15 @@
             <div class="col-lg-4">
               <mat-form-field>
                 <input formControlName="espana" matInput placeholder="España">
-                <mat-error>This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['espana'].errors?.required">This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['espana'].errors?.pattern">Values shoul be numeric.</mat-error>
               </mat-form-field>
             </div>
             <div class="col-lg">
               <mat-form-field>
                 <input formControlName="mexico" matInput placeholder="Mexico">
-                <mat-error>This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['mexico'].errors?.required">This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['mexico'].errors?.pattern">Values shoul be numeric.</mat-error>
               </mat-form-field>
             </div>
           </div>
@@ -69,13 +76,15 @@
             <div class="col-lg-4">
               <mat-form-field>
                 <input formControlName="polonia" matInput placeholder="Polonia">
-                <mat-error>This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['polonia'].errors?.required">This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['polonia'].errors?.pattern">Values shoul be numeric.</mat-error>
               </mat-form-field>
             </div>
             <div class="col-lg">
               <mat-form-field>
                 <input formControlName="portugal" matInput placeholder="Portugal">
-                <mat-error>This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['portugal'].errors?.required">This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['portugal'].errors?.pattern">Values shoul be numeric.</mat-error>
               </mat-form-field>
             </div>
           </div>
@@ -86,13 +95,15 @@
             <div class="col-lg-4">
               <mat-form-field>
                 <input formControlName="uk" matInput placeholder="UK">
-                <mat-error>This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['uk'].errors?.required">This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['uk'].errors?.pattern">Values shoul be numeric.</mat-error>
               </mat-form-field>
             </div>
             <div class="col-lg">
               <mat-form-field>
                 <input formControlName="eeuu" matInput placeholder="EE.UU">
-                <mat-error>This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['eeuu'].errors?.required">This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['eeuu'].errors?.pattern">Values shoul be numeric.</mat-error>
               </mat-form-field>
             </div>
           </div>
@@ -103,7 +114,8 @@
             <div class="col-lg-4">
               <mat-form-field>
                 <input formControlName="totalGrupo" matInput placeholder="Total Grupo">
-                <mat-error>This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['totalGrupo'].errors?.required">This field is mandatory.</mat-error>
+                <mat-error *ngIf="service.formGlobalVsExposure.controls['totalGrupo'].errors?.pattern">Values shoul be numeric.</mat-error>
               </mat-form-field>
             </div>
           </div>

@@ -51,32 +51,32 @@ export class ManualdatauploadService {
 
   });
 
-
+  public formGEValidator = [Validators.required,Validators.pattern("^[0-9]*$")]
   formGlobalVsExposure: FormGroup = new FormGroup({
     $key: new FormControl(null),
 
     // Asia
-    asia: new FormControl('',[Validators.required,Validators.pattern("^[0-9]*$")]),
+    asia: new FormControl('',this.formGEValidator),
     // Continental Europe
-    continentalEurope: new FormControl('',Validators.required),
+    continentalEurope: new FormControl('',this.formGEValidator),
     // Brasil
-    brasil: new FormControl('',Validators.required),
+    brasil: new FormControl('',this.formGEValidator),
     // Chile
-    chile: new FormControl('',Validators.required),
+    chile: new FormControl('',this.formGEValidator),
     // España
-    espana: new FormControl('',Validators.required),
+    espana: new FormControl('',this.formGEValidator),
     // Mexico
-    mexico: new FormControl('',Validators.required),
+    mexico: new FormControl('',this.formGEValidator),
     // Polonia
-    polonia: new FormControl('',Validators.required),
+    polonia: new FormControl('',this.formGEValidator),
     // Portugal
-    portugal: new FormControl('',Validators.required),
+    portugal: new FormControl('',this.formGEValidator),
     // Uk
-    uk: new FormControl('',Validators.required),
+    uk: new FormControl('',this.formGEValidator),
     // EEUU
-    eeuu: new FormControl('',Validators.required),
+    eeuu: new FormControl('',this.formGEValidator),
     // Total Grupo
-    totalGrupo: new FormControl('',Validators.required),
+    totalGrupo: new FormControl('',this.formGEValidator),
   });
 
   // getManualDataUpload(){

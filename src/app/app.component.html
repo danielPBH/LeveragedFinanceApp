@@ -15,7 +15,7 @@
     <li>
       <input [matDatepicker]="basicDatepicker" placeholder="Date">
       <mat-datepicker-toggle [for]="basicDatepicker">
-          <img matDatepickerToggleIcon src="../assets/images/toggleIconDropDownMenuBar.png">
+        <img matDatepickerToggleIcon src="../assets/images/toggleIconDropDownMenuBar.png">
       </mat-datepicker-toggle>
       <mat-datepicker #basicDatepicker></mat-datepicker>
     </li>
@@ -29,40 +29,41 @@
     <li>
       <!-- <a href="#">Feedback</a> -->
       <img src="../assets/images/userLogo.png">
-    </li> 
+    </li>
   </ul>
 </nav>
 
-    <div class="container principal">
-      <div class="row">
-        <div class="col-lg-1">
-          <div id="sidebar">
-            <ul style="list-style-type:none;">
-              <li routerLink="/element-list">
-                <img src="../assets/images/menuBarHomeImage.png" width="55" height="65">
-              </li>
-              <!-- <li routerLink="/element-table"> -->
-              <li>
-                <img src="../assets/images/menuBarCompareImage.png" width="55" height="65">
-              </li>
-              <li routerLink="/bar-chart">
-                <img src="../assets/images/menuBarTopImage.png" width="55" height="65">
-              </li>
-              <li routerLink="/pie-chart">
-                <img src="../assets/images/menuBarReportsImage.png" width="55" height="65">
-              </li>
-              <!-- <li routerLink="/file-upload"> -->
-              <li routerLink="/element-table">
-                <img src="../assets/images/menuBarUploadsImage.png" width="55" height="65">
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-11">
-          <router-outlet></router-outlet>
-        </div>
+<div class="container principal">
+  <div class="row">
+    <div class="col-lg-1">
+      <div id="sidebar">
+        <ul style="list-style-type:none;">
+          <!-- <li routerLink="/element-list"> -->
+          <li routerLink="/dashboard">
+            <img src="../assets/images/menuBarHomeImage.png" width="55" height="65">
+          </li>
+          <!-- <li routerLink="/element-table"> -->
+          <li>
+            <img src="../assets/images/menuBarCompareImage.png" width="55" height="65">
+          </li>
+          <li routerLink="/bar-chart">
+            <img src="../assets/images/menuBarTopImage.png" width="55" height="65">
+          </li>
+          <li routerLink="/pie-chart">
+            <img src="../assets/images/menuBarReportsImage.png" width="55" height="65">
+          </li>
+          <!-- <li routerLink="/file-upload"> -->
+          <li routerLink="/element-table">
+            <img src="../assets/images/menuBarUploadsImage.png" width="55" height="65">
+          </li>
+        </ul>
       </div>
     </div>
+    <div class="col-lg-11">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
 
 
 

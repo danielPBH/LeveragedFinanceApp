@@ -13,6 +13,7 @@ import { ElementDialogTableComponent } from './components/element-dialog-table/e
 import { ElementFileLogComponent } from './components/element-file-log/element-file-log.component';
 import { ElementFormManDataGexComponent } from './components/element-form-man-data-gex/element-form-man-data-gex.component';
 import { ElementManDataComponent } from './components/element-man-data/element-man-data.component';
+import { ElementDashboardComponent } from './components/element-dashboard/element-dashboard.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path: 'file-log', component: ElementFileLogComponent},
   {path: 'form-man-data-gex', component: ElementFormManDataGexComponent},
   {path: 'man-data', component: ElementManDataComponent},
+  {path: 'dashboard', component: ElementDashboardComponent},
   {path: '**', component: ElementListComponent}
 ];
 

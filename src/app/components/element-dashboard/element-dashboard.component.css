@@ -1,0 +1,290 @@
+* {
+    margin: 0px;
+    padding: 0px;
+
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+nav{
+  background: #F3F7F9;
+  /* height: 80px; */
+  width: 100%;
+  /* box-shadow: 2px 2px 5px #b1b0b0; */
+}
+
+.checkBoxes{
+    float: right;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+mat-radio-button{
+    margin-right: 10px;
+  }
+
+.titlePrincipal{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+mat-grid-tile {
+    background: lightblue;
+  }
+
+
+  /* Ini First Element "Leveraged Finance" frame Dashboadr */
+  .dashOneOneLine{
+    font-weight: bold;
+  }
+
+  .dashOneTwoLineOne{
+    margin-right: 5px;
+  }
+
+  .dashOneTwoLineTwo{
+      color: red;
+      font-weight: bold;
+  }
+  /* ------- */
+  .dashOneThreeLineOne{
+    font-size: 20px;
+    margin-right: 5px;
+  }
+
+  .dashOneThreeLineTwo{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .dashOneThreLineThree{
+    font-size: 20px;
+  }
+  /* ------ */
+  .dashOneFourLineOne{
+      font-size: 13px;
+      margin-right: 25px;
+  }
+
+  .dashOneFourLineTwo{
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  .dashOneFourLineThree{
+    margin-right: 5px;
+    margin-top: 1px;
+  }
+
+  .dashOneFourLineFour{
+    font-size: 15px;
+  }
+
+  .dashOneFourLineFive{
+    font-size: 15px;
+  }
+
+  .floatRight{
+      float: right;
+  }
+  /* Fin First Element "Leveraged Finance" frame Dashboadr */
+  /* ----------------------------------------------------- */
+
+  /* Ini First Element "Leveraged Buy outs" frame Dashboadr */
+.dashTwoThreeLineOne{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.dashTwoThreeLineTwo{
+    font-size: 30px;
+}
+
+.dashTwoThreLineThree{
+    font-size: 20px;
+}
+/* --------------- */
+.dashTwoFourLineOne{
+    font-size: 13px;
+    margin-right: 25px;
+}
+
+.dashTwoFourLineTwo{
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.dashTwoFourLineThree{
+    margin-right: 5px;
+    margin-top: 1px;
+}
+
+.dashTwoFourLineFour{
+    font-size: 15px;
+}
+
+.dashTwoFourLineFive{
+    font-size: 15px;
+}
+/* Fin First Element "Leveraged Buy outs" frame Dashboadr */
+/*- ----------------------------------------------------- */
+
+/* Ini First Element "SCIB & SCCB" frame Dashboadr */
+.dashThreeThreeLineOne{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.dashThreeThreeLineTwo{
+    font-size: 30px;
+}
+
+.dashThreeThreLineThree{
+    font-size: 20px;
+}
+/* --------------- */
+.dashThreeFourLineOne{
+    font-size: 13px;
+    margin-right: 25px;
+}
+
+.dashThreeFourLineTwo{
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.dashThreeFourLineThree{
+    margin-right: 5px;
+    margin-top: 1px;
+}
+
+.dashThreeFourLineFour{
+    font-size: 15px;
+}
+
+.dashThreeFourLineFive{
+    font-size: 15px;
+}
+/* Fin First Element "SCIB & SCCB" frame Dashboadr */
+/* ----------------------------------------------- */
+
+/* Ini First Element "CLO's" frame Dashboadr */
+.dashFourThreeLineOne{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.dashFourThreeLineTwo{
+    font-size: 30px;
+}
+
+.dashFourThreLineThree{
+    font-size: 20px;
+}
+/* --------------- */
+.dashFourFourLineOne{
+    font-size: 13px;
+    margin-right: 25px;
+}
+
+.dashFourFourLineTwo{
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.dashFourFourLineThree{
+    margin-right: 5px;
+    margin-top: 1px;
+}
+
+.dashFourFourLineFour{
+    font-size: 15px;
+}
+
+.dashFourFourLineFive{
+    font-size: 15px;
+}
+/* Fin First Element "CLO's" frame Dashboadr */
+/* ----------------------------------------- */
+
+/* Fin First Element "High Yield & Loantrading Portfolio" frame Dashboadr */
+.dashFiveThreeLineOne{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.dashFiveThreeLineTwo{
+    font-size: 30px;
+}
+
+.dashFiveThreLineThree{
+    font-size: 20px;
+}
+/* --------------- */
+.dashFiveFourLineOne{
+    font-size: 13px;
+    margin-right: 25px;
+}
+
+.dashFiveFourLineTwo{
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.dashFiveFourLineThree{
+    margin-right: 5px;
+    margin-top: 1px;
+}
+
+.dashFiveFourLineFour{
+    font-size: 15px;
+}
+
+.dashFiveFourLineFive{
+    font-size: 15px;
+}
+/* Fin First Element "High Yield & Loantrading Portfolio" frame Dashboadr */
+/* ------------------------------------------------------- */
+/* Ini First Element "UnderWriting" frame Dashboadr */
+.dashSixThreeLineOne{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.dashSixThreeLineTwo{
+    font-size: 30px;
+}
+
+.dashSixThreLineThree{
+    font-size: 20px;
+}
+/* --------------- */
+.dashSixFourLineOne{
+    font-size: 13px;
+    margin-right: 25px;
+}
+
+.dashSixFourLineTwo{
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.dashSixFourLineThree{
+    margin-right: 5px;
+    margin-top: 1px;
+}
+
+.dashSixFourLineFour{
+    font-size: 15px;
+}
+
+.dashSixFourLineFive{
+    font-size: 15px;
+}
+/* Fin First Element "UnderWriting" frame Dashboadr */
